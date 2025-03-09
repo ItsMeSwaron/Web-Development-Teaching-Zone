@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <h1 class="text-danger">This is Dynamic Page </h1>
+
+{% for val in contents %}
+
+    <h1>{{val.name}}</h1>
+    <h1>{{val.id}}</h1>
+
+    {% if val.cgpa >= 3.10 %}
+        <h1>{{val.cgpa}}</h1>
+    {% endif %}
+
+{% endfor %}
+
 {% endblock %}
